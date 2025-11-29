@@ -56,24 +56,36 @@ button[type="submit"]:hover {
 
 .hero-img-wrapper {
   width: 100%;
-  height: 68vh;      /* AJUSTA: 40vh, 50vh, 60vh según lo que quieras */
+  height: 60vh;      /* Altura para desktop */
   overflow: hidden;
+  position: relative;
 }
 
-.hero-img-wrapper img {
-  width: 100%;
+/* Ajustar altura en móvil */
+@media (max-width: 767px) {
+  .hero-img-wrapper {
+    height: 50vh;    /* Altura más pequeña para móvil */
+  }
+}
+
+.carousel-container {
+  height: 100%;
+}
+
+.carousel-slide {
   height: 100%;
   object-fit: cover;
-  object-position: center; 
+  object-position: center;
 }
-/* Acercar todo después del hero solo en móvil */
+
+/* Acercar contenido después del hero solo en móvil */
 @media (max-width: 767px) {
   #inicio {
-    margin-bottom: -40px; /* Esto reduce el espacio después del hero */
+    margin-bottom: -40px;
   }
   
   #inicio h2 {
-    margin-top: -100px; /* Esto sube el RIDE THE LIGHT */
+    margin-top: -100px;
   }
 }
 
@@ -189,7 +201,7 @@ button[type="submit"]:hover {
       <span class="carousel-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300 cursor-pointer"></span>
     </div>
   </div>
-  <h2 class="text-4xl font-bold mt--10 md:mt-8" data-translate="hero.title">RIDE THE LIGHT</h2>
+  <h2 class="text-4xl font-bold mt-4 md:mt-8" data-translate="hero.title">RIDE THE LIGHT</h2>
 </section>
 
     
