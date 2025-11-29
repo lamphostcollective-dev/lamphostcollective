@@ -131,7 +131,7 @@ button[type="submit"]:hover {
 
   <!-- Centro: Logo -->
   <div class="flex justify-center w-full">
-    <img src="images/logo.png" alt="Logo Lamphost" class="h-16 w-auto">
+    <img src="images/ISOTIPONEGRO.png" alt="Logo Lamphost" class="h-16 w-auto">
   </div>
 
   <!-- Derecha: Menú -->
@@ -141,7 +141,7 @@ button[type="submit"]:hover {
   <a href="#contacto" class="hover:text-yellow-500" data-translate="nav.contacto">Contacto</a>
 </nav>
 <!-- Selector de idioma -->
-<div class="absolute right-6 top-[80px] md:top-[90px]">
+<div class="absolute right-6 top-[80px] md:top-[75px]">
   <select id="language-switcher" class="border border-gray-300 rounded px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400">
     <option value="es">🇪🇸 ES</option>
     <option value="en">🇬🇧 EN</option>
@@ -154,12 +154,33 @@ button[type="submit"]:hover {
 
 
 
-  <!-- HERO -->
- <section id="inicio" class="text-center bg-gray-50">
-  <div class="hero-img-wrapper">
-    <img src="images/GRUPO.jpg" alt="Foto principal Snow">
+ <!-- HERO -->
+<section id="inicio" class="text-center bg-gray-50">
+  <div class="hero-img-wrapper relative overflow-hidden group">
+    <div class="carousel-container flex transition-transform duration-700 ease-in-out">
+      <img src="images/4.png" alt="Foto Snow 1" class="carousel-slide w-full flex-shrink-0">
+      <img src="images/5.png" alt="Foto Snow 2" class="carousel-slide w-full flex-shrink-0">
+      <img src="images/3.png" alt="Foto Snow 3" class="carousel-slide w-full flex-shrink-0">
+      <img src="images/6.png" alt="Foto Snow 4" class="carousel-slide w-full flex-shrink-0">
+    </div>
+    
+    <!-- Flechas -->
+    <button class="carousel-btn prev absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10">
+      ‹
+    </button>
+    <button class="carousel-btn next absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10">
+      ›
+    </button>
+    
+    <!-- Indicadores -->
+    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+      <span class="carousel-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300 cursor-pointer"></span>
+      <span class="carousel-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300 cursor-pointer"></span>
+      <span class="carousel-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300 cursor-pointer"></span>
+      <span class="carousel-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300 cursor-pointer"></span>
+    </div>
   </div>
-  <h2 class="text-4xl font-bold mt-4" data-translate="hero.title">RIDE THE LIGHT</h2>
+  <h2 class="text-4xl font-bold mt-10" data-translate="hero.title">RIDE THE LIGHT</h2>
 </section>
 
     
@@ -1324,7 +1345,7 @@ function checkPassword() {
       </div>
     </div>
     
-    <img src="images/tomi.png" alt="Sobre Lamphost" class="rounded-2xl shadow-lg">
+    <img src="images/Tonimontaña.jpg" alt="Sobre Lamphost" class="rounded-2xl shadow-lg">
   </div>
 </section>
   <!-- CTA FINAL -->
@@ -1524,7 +1545,75 @@ document.querySelectorAll(".carousel").forEach(carousel => {
   });
 });
 </script>
+<script>
+// Carrusel con controles
+const carousel = document.querySelector('.carousel-container');
+const slides = document.querySelectorAll('.carousel-slide');
+const dots = document.querySelectorAll('.carousel-dot');
+const prevBtn = document.querySelector('.carousel-btn.prev');
+const nextBtn = document.querySelector('.carousel-btn.next');
+let currentIndex = 0;
+let autoplayInterval;
 
+function goToSlide(index) {
+  currentIndex = index;
+  carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+  
+  // Actualizar dots
+  dots.forEach((dot, i) => {
+    if (i === currentIndex) {
+      dot.classList.add('bg-white');
+      dot.classList.remove('bg-white/50');
+    } else {
+      dot.classList.remove('bg-white');
+      dot.classList.add('bg-white/50');
+    }
+  });
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % slides.length;
+  goToSlide(currentIndex);
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  goToSlide(currentIndex);
+}
+
+// Eventos de botones
+if (prevBtn) prevBtn.addEventListener('click', () => {
+  prevSlide();
+  resetAutoplay();
+});
+
+if (nextBtn) nextBtn.addEventListener('click', () => {
+  nextSlide();
+  resetAutoplay();
+});
+
+// Eventos de dots
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    goToSlide(index);
+    resetAutoplay();
+  });
+});
+
+// Autoplay
+function startAutoplay() {
+  autoplayInterval = setInterval(nextSlide, 4000);
+}
+
+function resetAutoplay() {
+  clearInterval(autoplayInterval);
+  startAutoplay();
+}
+
+// Inicializar
+goToSlide(0);
+startAutoplay();
+</script>
 </body>
 
 <script type="text/javascript">
