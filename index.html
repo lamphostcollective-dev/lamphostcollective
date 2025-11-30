@@ -270,9 +270,15 @@ function checkPassword() {
 <section id="productos" class="py-16 bg-gray-50">
   <div class="max-w-6xl mx-auto px-6 text-center">
     <h2 class="text-3xl font-bold mb-12" data-translate="productos.title">EARLY ACCESS ESSENTIAL HOODIES</h2>
-
-   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-      
+<!DOCTYPE html>
+<!-- Descripción de las sudaderas -->
+<div class="descripcion-sudaderas" style="max-width: 900px; margin: 0 auto 40px; padding: 0 20px;">
+    <p style="font-family: 'Montserrat', sans-serif; font-size: 15px; line-height: 1.6; color: #666; font-weight: 400; text-align: center; margin: 0;">
+        <span data-translate="hoodies-desc-line1">Corte oversize, 440 g/m², tacto premium suave y el abrigo que necesitas en los días fríos.</span><br>
+        <span data-translate="hoodies-desc-line2">Material exterior: 100% algodón. Material interior: 70% algodón hilado, 30% poliéster reciclado.</span>
+    </p>
+</div>
+   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">  
       <!-- PRODUCTO 1 -->
       <div class="text-center product-card" data-id="p1">
          <div class="carousel relative mx-auto rounded-xl overflow-hidden shadow w-full max-w-md">
@@ -1409,7 +1415,9 @@ const translations = {
     
     // Productos
     "productos.title": "EARLY ACCESS ESSENTIAL HOODIES",
-    
+    "hoodies-desc-line1": "Corte oversize, 440 g/m², tacto premium suave y el abrigo que necesitas en los días fríos.",
+    "hoodies-desc-line2": "Material exterior: 100% algodón. Material interior: 70% algodón hilado, 30% poliéster reciclado.",
+
     // Formulario
     "form.title": "RESERVA TU SUDADERA EARLY ACCESS",
     "form.price": "Precio exclusivo: 47,95€ (descuento lanzamiento)",
@@ -1456,7 +1464,9 @@ const translations = {
     
     // Productos
     "productos.title": "EARLY ACCESS ESSENTIAL HOODIES",
-    
+    "hoodies-desc-line1": "Oversized fit, 440gsm weight, a soft premium feel, and the warmth you need on cold days.",
+    "hoodies-desc-line2": "Outer fabric: 100% cotton. Inner fabric: 70% ring-spun cotton, 30% recycled polyester.", 
+
     // Formulario
     "form.title": "RESERVE YOUR EARLY ACCESS HOODIE",
     "form.price": "Exclusive price: €47'95 (launch discount)",
@@ -1635,5 +1645,3 @@ goToSlide(0);
 startAutoplay();
 </script>
 </body>
-
-<script type="text/javascript">
