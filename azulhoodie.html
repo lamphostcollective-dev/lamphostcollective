@@ -25,23 +25,25 @@
     }
     
     /* Miniaturas */
-    .thumbnail {
-      cursor: pointer;
-      transition: all 0.3s ease;
-      border: 3px solid transparent;
-    }
-    .thumbnail:hover {
-      border-color: #fbbf24;
-      transform: scale(1.05);
-    }
-    .thumbnail.active {
-      border-color: #000;
-    }
-    .header-title {
-      font-family: 'EB Garamond', serif;
-      font-style: italic;
-      font-weight: 700;
-    }
+/* Hacer que el botón Shopify ocupe todo el ancho como el de abajo */
+#product-component-1764759159889 {
+  width: 100% !important;
+  margin-bottom: 16px !important;
+}
+
+#product-component-1764759159889 > div,
+#product-component-1764759159889 .shopify-buy__product {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+#product-component-1764759159889 .shopify-buy__btn {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: block !important;
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+}
   </style>
 </head>
 
@@ -478,33 +480,33 @@
 /*]]>*/
 </script>
 
-  <!-- Forzar ancho completo del botón Shopify -->
   <script>
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      const shopifyContainer = document.getElementById('product-component-1763139880339');
-      const shopifyButton = document.querySelector('#product-component-1763139880339 .shopify-buy__btn');
-      const shopifyProduct = document.querySelector('#product-component-1763139880339 .shopify-buy__product');
-      
-      if (shopifyContainer) {
-        shopifyContainer.style.width = '100%';
-        shopifyContainer.style.maxWidth = '100%';
-        shopifyContainer.style.marginBottom = '16px';
-      }
-      
-      if (shopifyProduct) {
-        shopifyProduct.style.width = '100%';
-        shopifyProduct.style.maxWidth = '100%';
-      }
-      
-      if (shopifyButton) {
-        shopifyButton.style.width = '100%';
-        shopifyButton.style.maxWidth = '100%';
-        shopifyButton.style.display = 'block';
-      }
-    }, 800);
-  });
-  </script>
+// Forzar ancho completo del botón Shopify después de cargar
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    const shopifyContainer = document.getElementById('product-component-1764759159889');
+    const shopifyButton = document.querySelector('#product-component-1764759159889 .shopify-buy__btn');
+    const shopifyProduct = document.querySelector('#product-component-1764759159889 .shopify-buy__product');
+    
+    if (shopifyContainer) {
+      shopifyContainer.style.width = '100%';
+      shopifyContainer.style.maxWidth = '100%';
+      shopifyContainer.style.marginBottom = '16px';
+    }
+    
+    if (shopifyProduct) {
+      shopifyProduct.style.width = '100%';
+      shopifyProduct.style.maxWidth = '100%';
+    }
+    
+    if (shopifyButton) {
+      shopifyButton.style.width = '100%';
+      shopifyButton.style.maxWidth = '100%';
+      shopifyButton.style.display = 'block';
+    }
+  }, 1500);
+});
+</script>
 
   <!-- Script de traducción -->
   <script>
@@ -615,6 +617,31 @@
     });
   }
   </script>
-
+<script>
+// Forzar ancho completo del botón Shopify después de cargar
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    const shopifyContainer = document.getElementById('product-component-1763139880339');
+    const shopifyButton = document.querySelector('#product-component-1763139880339 .shopify-buy__btn');
+    const shopifyProduct = document.querySelector('#product-component-1763139880339 .shopify-buy__product');
+    
+    if (shopifyContainer) {
+      shopifyContainer.style.width = '100%';
+      shopifyContainer.style.maxWidth = '100%';
+    }
+    
+    if (shopifyProduct) {
+      shopifyProduct.style.width = '100%';
+      shopifyProduct.style.maxWidth = '100%';
+    }
+    
+    if (shopifyButton) {
+      shopifyButton.style.width = '100%';
+      shopifyButton.style.maxWidth = '100%';
+      shopifyButton.style.display = 'block';
+    }
+  }, 1500);
+});
+</script>
 </body>
 </html>
