@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESSENTIAL HOODIE BEIGE - LAMPHOST</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'EB Garamond', serif;
+      font-style: italic;
+      font-weight: 700;
+    }
+    
+    .main-image {
+      transition: opacity 0.3s ease;
+    }
+    
+    .thumbnail {
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 3px solid transparent;
+    }
+    .thumbnail:hover {
+      border-color: #fbbf24;
+      transform: scale(1.05);
+    }
+    .thumbnail.active {
+      border-color: #000;
+    }
+    .header-title {
+      font-family: 'EB Garamond', serif;
+      font-style: italic;
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-900">
+  
+  <!-- HEADER -->
+  <header class="flex justify-between items-center p-6 shadow-md relative">
+    <div class="absolute left-6 top-1/2 -translate-y-1/2">
+      <a href="index.html" class="text-2xl font-bold hover:text-yellow-500 transition header-title">
+        LAMPHOST
+      </a>
+    </div>
+    
+    <div class="flex justify-center w-full">
+      <img src="images/ISOTIPONEGRO.png" alt="Logo Lamphost" class="h-16 w-auto">
+    </div>
+    
+    <nav class="space-x-6 hidden md:flex absolute right-6 top-1/2 -translate-y-1/2">
+      <a href="index.html#inicio" class="hover:text-yellow-500 transition uppercase font-bold" style="font-family: 'EB Garamond', serif; font-style: italic; letter-spacing: 0.08em;" data-translate="nav.inicio">Inicio</a>
+      <a href="index.html#productos" class="hover:text-yellow-500 transition uppercase font-bold" style="font-family: 'EB Garamond', serif; font-style: italic; letter-spacing: 0.08em;" data-translate="nav.productos">Productos</a>
+      <a href="index.html#contacto" class="hover:text-yellow-500 transition uppercase font-bold" style="font-family: 'EB Garamond', serif; font-style: italic; letter-spacing: 0.08em;" data-translate="nav.contacto">Contacto</a>
+    </nav>
+    
+    <div class="absolute right-6 top-[40px] md:top-[75px]">
+      <select id="language-switcher" class="border border-gray-300 rounded px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400">
+        <option value="es">🇪🇸 ES</option>
+        <option value="en">🇬🇧 EN</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="max-w-7xl mx-auto px-6 py-4">
+    <div class="text-sm text-gray-600">
+      <a href="index.html" class="hover:text-black" data-translate="breadcrumb.home">Inicio</a> 
+      <span class="mx-2">/</span>
+      <a href="index.html#productos" class="hover:text-black" data-translate="breadcrumb.products">Productos</a>
+      <span class="mx-2">/</span>
+      <span class="text-black font-semibold">Essential Hoodie Beige</span>
+    </div>
+  </div>
+
+  <!-- CONTENIDO PRODUCTO -->
+  <section class="max-w-7xl mx-auto px-6 py-12">
+    <div class="grid md:grid-cols-2 gap-12">
+      
+      <!-- GALERÍA -->
+      <div>
+        <div class="mb-6 bg-gray-50 rounded-2xl overflow-hidden shadow-lg">
+          <img id="main-image" src="images/SUDADERABEIGEDELANTE.png" alt="Essential Hoodie Beige" class="w-full h-auto main-image">
+        </div>
+        
+        <div class="grid grid-cols-4 gap-4">
+          <img src="images/SUDADERABEIGEDELANTE.png" 
+               onclick="changeImage('images/SUDADERABEIGEDELANTE.png', this)" 
+               class="thumbnail active rounded-lg shadow cursor-pointer w-full h-24 object-cover">
+          
+          <img src="images/SUDADERABEIGEESPALDA.png" 
+               onclick="changeImage('images/SUDADERABEIGEESPALDA.png', this)" 
+               class="thumbnail rounded-lg shadow cursor-pointer w-full h-24 object-cover">
+          
+          <img src="images/2 copia.png" 
+               onclick="changeImage('images/2 copia.png', this)" 
+               class="thumbnail rounded-lg shadow cursor-pointer w-full h-24 object-cover">
+        </div>
+      </div>
+      
+      <!-- INFORMACIÓN -->
+      <div>
+        <h1 class="text-4xl font-bold mb-4" data-translate="product.title">ESSENTIAL HOODIE BEIGE</h1>
+        
+        <div class="flex items-center gap-4 mb-6">
+          <span class="text-3xl font-bold text-gray-900">54,95€</span>
+        </div>
+        
+        <div class="mb-8">
+          <h3 class="text-xl font-bold mb-3" data-translate="product.description.title">DESCRIPCIÓN</h3>
+          <p class="text-gray-700 leading-relaxed mb-4" data-translate="product.description.p1">
+            La sudadera esencial de Lamphost combina estilo minimalista con máxima comodidad. Perfecta para tus aventuras en la montaña o el día a día urbano.
+          </p>
+          <p class="text-gray-700 leading-relaxed" data-translate="product.description.p2">
+            Corte oversize, tacto premium suave y el abrigo que necesitas en los días fríos. Material exterior: 100% algodón. Material interior: 70% algodón hilado, 30% poliéster reciclado.
+          </p>
+        </div>
+        
+        <div class="mb-8 bg-gray-50 p-6 rounded-xl">
+          <h3 class="text-xl font-bold mb-4" data-translate="product.features.title">CARACTERÍSTICAS</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-center gap-2">
+              <span class="text-green-600 font-bold">✓</span>
+              <span data-translate="product.features.1">100% algodón </span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-green-600 font-bold">✓</span>
+              <span data-translate="product.features.2">Diseño unisex</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-green-600 font-bold">✓</span>
+              <span data-translate="product.features.3">440 g/m²</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-green-600 font-bold">✓</span>
+              <span data-translate="product.features.4">Bolsillo canguro frontal</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- CONTENEDOR DEL BUY BUTTON (TÚ LO CAMBIAS) -->
+        <div id='product-component-1764760250880'></div>
+        
+        <a href="index.html#productos" class="block w-full text-center border-2 border-black text-black font-bold py-4 px-8 rounded-xl text-lg hover:bg-black hover:text-white transition-all duration-300" data-translate="product.button.back">
+          ← Volver a productos
+        </a>
+        
+        <div class="mt-8 pt-8 border-t border-gray-200">
+          <div class="space-y-3 text-sm text-gray-600">
+            <div class="flex items-center gap-3">
+              <span class="text-xl">🚚</span>
+              <span data-translate="product.info.shipping">Envío gratis en pedidos superiores a 75€</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-xl">↩️</span>
+              <span data-translate="product.info.returns">Devoluciones gratuitas en 30 días</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-xl">🔒</span>
+              <span data-translate="product.info.payment">Pago seguro garantizado</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+<!-- Productos relacionados (OCULTO temporalmente) -->
+<section id="related-products" class="max-w-7xl mx-auto px-6 py-12 border-t border-gray-200 hidden" aria-hidden="true">
+  <!-- PRODUCTOS RELACIONADOS -->
+  <section class="max-w-7xl mx-auto px-6 py-12 border-t border-gray-200">
+    <h2 class="text-3xl font-bold mb-8 text-center" data-translate="product.related.title">TAMBIÉN TE PUEDE INTERESAR</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <a href="azulhoodie.html" class="group">
+        <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+          <img src="images/SUDADERAAZULDELANTE.png" alt="Essential Hoodie Blue" class="w-full h-64 object-cover">
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">Essential Hoodie Blue</h3>
+            <p class="text-gray-600">54,95€</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="producto-green.html" class="group">
+        <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+          <img src="images/SUDADERAVERDEDELANTE.png" alt="Essential Hoodie Green" class="w-full h-64 object-cover">
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">Essential Hoodie Green</h3>
+            <p class="text-gray-600">54,95€</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="producto-grey.html" class="group">
+        <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+          <img src="images/SUDADERAGRISDELANTE.png" alt="Essential Hoodie Grey" class="w-full h-64 object-cover">
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">Essential Hoodie Grey</h3>
+            <p class="text-gray-600">54,95€</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+<!-- FIN Productos relacionados -->
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white py-8 text-center mt-12">
+    <p data-translate="footer.follow">Síguenos en redes sociales</p>
+    <div class="flex justify-center space-x-6 mt-4">
+      <a href="https://www.instagram.com/lamphost" target="_blank" class="hover:text-yellow-500">Instagram</a>
+      <a href="https://www.tiktok.com/@lamphost" target="_blank" class="hover:text-yellow-500">TikTok</a>
+    </div>
+    <p class="mt-6 text-gray-400" data-translate="footer.contact">Contacto: lamphostcollective@gmail.com</p>
+    <p class="mt-2 text-gray-500" data-translate="footer.rights">© 2025 Lamphost. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    function changeImage(src, element) {
+      const mainImage = document.getElementById('main-image');
+      mainImage.style.opacity = '0';
+      setTimeout(() => {
+        mainImage.src = src;
+        mainImage.style.opacity = '1';
+      }, 150);
+      document.querySelectorAll('.thumbnail').forEach(thumb => {
+        thumb.classList.remove('active');
+      });
+      element.classList.add('active');
+    }
+  </script>
+
+  <!-- (INCLUYE AQUÍ TU BUY BUTTON NUEVO) -->
+<div id='product-component-1764760250880'></div>
+<script type="text/javascript">
+/*<![CDATA[*/
+(function () {
+  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  if (window.ShopifyBuy) {
+    if (window.ShopifyBuy.UI) {
+      ShopifyBuyInit();
+    } else {
+      loadScript();
+    }
+  } else {
+    loadScript();
+  }
+  function loadScript() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = scriptURL;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+    script.onload = ShopifyBuyInit;
+  }
+  function ShopifyBuyInit() {
+    var client = ShopifyBuy.buildClient({
+      domain: '8bmbbv-05.myshopify.com',
+      storefrontAccessToken: '4e8eb6e301111ac41a265c962238480a',
+    });
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+      ui.createComponent('product', {
+        id: '15450732986742',
+        node: document.getElementById('product-component-1764760250880'),
+        moneyFormat: '%E2%82%AC%7B%7Bamount_with_comma_separator%7D%7D',
+        options: {
+  "product": {
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "calc(25% - 20px)",
+          "margin-left": "20px",
+          "margin-bottom": "50px"
+        }
+      },
+      "title": {
+        "font-family": "Montserrat, sans-serif"
+      },
+      "button": {
+        "font-family": "Montserrat, sans-serif",
+        ":hover": {
+          "background-color": "#161611"
+        },
+        "background-color": "#0d0d0a",
+        ":focus": {
+          "background-color": "#161611"
+        },
+        "border-radius": "15px",
+        "padding-left": "96px",
+        "padding-right": "96px"
+      },
+      "price": {
+        "font-family": "Montserrat, sans-serif",
+        "font-weight": "bold"
+      },
+      "compareAt": {
+        "font-family": "Montserrat, sans-serif",
+        "font-weight": "bold"
+      },
+      "unitPrice": {
+        "font-family": "Montserrat, sans-serif",
+        "font-weight": "bold"
+      }
+    },
+    "text": {
+      "button": "Add to cart"
+    },
+    "googleFonts": [
+      "Montserrat"
+    ]
+  },
+  "productSet": {
+    "styles": {
+      "products": {
+        "@media (min-width: 601px)": {
+          "margin-left": "-20px"
+        }
+      }
+    }
+  },
+  "modalProduct": {
+    "contents": {
+      "img": false,
+      "imgWithCarousel": true,
+      "button": false,
+      "buttonWithQuantity": true
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0px",
+          "margin-bottom": "0px"
+        }
+      },
+      "button": {
+        "font-family": "Montserrat, sans-serif",
+        ":hover": {
+          "background-color": "#161611"
+        },
+        "background-color": "#0d0d0a",
+        ":focus": {
+          "background-color": "#161611"
+        },
+        "border-radius": "15px",
+        "padding-left": "96px",
+        "padding-right": "96px"
+      },
+      "title": {
+        "font-family": "Helvetica Neue, sans-serif",
+        "font-weight": "bold",
+        "font-size": "26px",
+        "color": "#4c4c4c"
+      },
+      "price": {
+        "font-family": "Helvetica Neue, sans-serif",
+        "font-weight": "normal",
+        "font-size": "18px",
+        "color": "#4c4c4c"
+      },
+      "compareAt": {
+        "font-family": "Helvetica Neue, sans-serif",
+        "font-weight": "normal",
+        "font-size": "15.299999999999999px",
+        "color": "#4c4c4c"
+      },
+      "unitPrice": {
+        "font-family": "Helvetica Neue, sans-serif",
+        "font-weight": "normal",
+        "font-size": "15.299999999999999px",
+        "color": "#4c4c4c"
+      }
+    },
+    "googleFonts": [
+      "Montserrat"
+    ],
+    "text": {
+      "button": "Add to cart"
+    }
+  },
+  "option": {
+    "styles": {
+      "label": {
+        "font-family": "Montserrat, sans-serif",
+        "font-weight": "bold"
+      },
+      "select": {
+        "font-family": "Montserrat, sans-serif",
+        "font-weight": "bold"
+      }
+    },
+    "googleFonts": [
+      "Montserrat"
+    ]
+  },
+  "cart": {
+    "styles": {
+      "button": {
+        "font-family": "Montserrat, sans-serif",
+        ":hover": {
+          "background-color": "#161611"
+        },
+        "background-color": "#0d0d0a",
+        ":focus": {
+          "background-color": "#161611"
+        },
+        "border-radius": "15px"
+      }
+    },
+    "text": {
+      "total": "Subtotal",
+      "button": "Checkout"
+    },
+    "googleFonts": [
+      "Montserrat"
+    ]
+  },
+  "toggle": {
+    "styles": {
+      "toggle": {
+        "font-family": "Montserrat, sans-serif",
+        "background-color": "#0d0d0a",
+        ":hover": {
+          "background-color": "#161611"
+        },
+        ":focus": {
+          "background-color": "#161611"
+        }
+      }
+    },
+    "googleFonts": [
+      "Montserrat"
+    ]
+  }
+},
+      });
+    });
+  }
+})();
+/*]]>*/
+</script>
+  <!-- TRADUCCIÓN -->
+  <script>
+  const translations = {
+    es: {
+      "nav.inicio": "Inicio",
+      "nav.productos": "Productos",
+      "nav.contacto": "Contacto",
+      "breadcrumb.home": "Inicio",
+      "breadcrumb.products": "Productos",
+      "product.title": "ESSENTIAL HOODIE BEIGE",
+      "product.description.title": "DESCRIPCIÓN",
+      "product.description.p1": "La sudadera esencial de Lamphost combina estilo minimalista con máxima comodidad. Perfecta para tus aventuras en la montaña o el día a día urbano.",
+      "product.description.p2": "Corte oversize, tacto premium suave y el abrigo que necesitas en los días fríos. Material exterior: 100% algodón. Material interior: 70% algodón hilado, 30% poliéster reciclado.",
+      "product.features.title": "CARACTERÍSTICAS",
+      "product.features.1": "100% algodón",
+      "product.features.2": "Diseño unisex",
+      "product.features.3": "440 g/m²",
+      "product.features.4": "Bolsillo canguro frontal",
+      "product.button.back": "← Volver a productos",
+      "product.info.shipping": "Envío gratis en pedidos superiores a 75€",
+      "product.info.returns": "Devoluciones gratuitas en 30 días",
+      "product.info.payment": "Pago seguro garantizado",
+      "product.related.title": "TAMBIÉN TE PUEDE INTERESAR",
+      "footer.follow": "Síguenos en redes sociales",
+      "footer.contact": "Contacto: lamphostcollective@gmail.com",
+      "footer.rights": "© 2025 Lamphost. Todos los derechos reservados."
+    },
+    
+    en: {
+      "nav.inicio": "Home",
+      "nav.productos": "Products",
+      "nav.contacto": "Contact",
+      "breadcrumb.home": "Home",
+      "breadcrumb.products": "Products",
+      "product.title": "ESSENTIAL HOODIE BEIGE",
+      "product.description.title": "DESCRIPTION",
+      "product.description.p1": "Lamphost's essential hoodie combines minimalist style with maximum comfort. Perfect for your mountain adventures or everyday urban life.",
+      "product.description.p2": "Oversized fit, a soft premium feel, and the warmth you need on cold days. Outer fabric: 100% cotton. Inner fabric: 70% ring-spun cotton, 30% recycled polyester.",
+      "product.features.title": "FEATURES",
+      "product.features.1": "100% cotton",
+      "product.features.2": "Unisex design",
+      "product.features.3": "440gsm weight",
+      "product.features.4": "Front kangaroo pocket",
+      "product.button.back": "← Back to products",
+      "product.info.shipping": "Free shipping on orders over €75",
+      "product.info.returns": "Free returns within 30 days",
+      "product.info.payment": "Secure payment guaranteed",
+      "product.related.title": "YOU MAY ALSO LIKE",
+      "footer.follow": "Follow us on social media",
+      "footer.contact": "Contact: lamphostcollective@gmail.com",
+      "footer.rights": "© 2025 Lamphost. All rights reserved."
+    }
+  };
+
+  const langSelect = document.getElementById('language-switcher');
+
+  function saveLanguage(lang) {
+    localStorage.setItem('lamphost-language', lang);
+  }
+
+  function loadLanguage() {
+    return localStorage.getItem('lamphost-language') || 'es';
+  }
+
+  function translatePage(lang) {
+    const dict = translations[lang];
+    if (!dict) return;
+    document.querySelectorAll('[data-translate]').forEach(el => {
+      const key = el.getAttribute('data-translate');
+      if (dict[key]) el.textContent = dict[key];
+    });
+    saveLanguage(lang);
+  }
+
+  if (langSelect) {
+    const savedLang = loadLanguage();
+    langSelect.value = savedLang;
+    translatePage(savedLang);
+    langSelect.addEventListener('change', e => translatePage(e.target.value));
+  }
+  </script>
+
+</body>
+</html>

@@ -182,7 +182,7 @@ button[type="submit"]:hover {
   <div class="hero-img-wrapper relative overflow-hidden group">
     <div class="carousel-container flex transition-transform duration-700 ease-in-out">
       <img src="images/4.png" alt="Foto Snow 1" class="carousel-slide w-full flex-shrink-0">
-      <img src="images/5.png" alt="Foto Snow 2" class="carousel-slide w-full flex-shrink-0">
+      <img src="images/tonihinking.png" alt="Foto Snow 2" class="carousel-slide w-full flex-shrink-0">
       <img src="images/3.png" alt="Foto Snow 3" class="carousel-slide w-full flex-shrink-0">
       <img src="images/6.png" alt="Foto Snow 4" class="carousel-slide w-full flex-shrink-0">
     </div>
@@ -207,89 +207,30 @@ button[type="submit"]:hover {
 </section>
 
     
- <!-- Early Access - Solo bloquea productos -->
-<div id="early-access-overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); z-index:9999; backdrop-filter:blur(10px);">
-  <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center; background:white; padding:40px; border-radius:20px; box-shadow:0 20px 60px rgba(0,0,0,0.3);">
-    <h2 style="font-family:'EB Garamond',serif; font-size:2rem; margin-bottom:20px;" data-translate="overlay.title">🔒 EARLY ACCESS</h2>
-    <p style="color:#666; margin-bottom:30px;" data-translate="overlay.subtitle">Introduce la contraseña para ver los productos exclusivos</p>
-    <input type="password" id="ea-password" data-translate-placeholder="overlay.placeholder" placeholder="Contraseña" style="padding:12px 20px; border:2px solid #ddd; border-radius:10px; font-size:1rem; width:100%; max-width:300px; margin-bottom:15px;">
-    <br>
-    <button onclick="checkPassword()" style="background:#0d0d0a; color:white; padding:12px 40px; border:none; border-radius:10px; font-weight:bold; cursor:pointer; font-size:1rem; transition:all 0.3s;" data-translate="overlay.button">Entrar</button>
-    <p id="error-msg" style="color:red; margin-top:15px; display:none;" data-translate="overlay.error">Contraseña incorrecta</p>
-  </div>
-</div>
+ 
 
-<script>
-const password = "lamphostfam";
-
-// Mostrar overlay solo cuando se intenta ver productos
-window.addEventListener('DOMContentLoaded', function() {
-  const productSection = document.getElementById('productos');
-  const overlay = document.getElementById('early-access-overlay');
-  
-  // Observar cuando el usuario scrollea a productos
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !sessionStorage.getItem('ea-unlocked')) {
-        overlay.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-      }
-    });
-  }, { threshold: 0.3 });
-  
-  observer.observe(productSection);
-  
-  // También mostrar si hace click en "Ver productos"
-  document.querySelectorAll('a[href="#productos"]').forEach(link => {
-    link.addEventListener('click', (e) => {
-      if (!sessionStorage.getItem('ea-unlocked')) {
-        e.preventDefault();
-        overlay.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-      }
-    });
-  });
-});
-
-function checkPassword() {
-  const input = document.getElementById('ea-password').value;
-  const errorMsg = document.getElementById('error-msg');
-  
-  if(input === password) {
-    sessionStorage.setItem('ea-unlocked', 'true');
-    document.getElementById('early-access-overlay').style.display = 'none';
-    document.body.style.overflow = 'auto';
-    document.getElementById('productos').scrollIntoView({ behavior: 'smooth' });
-  } else {
-    errorMsg.style.display = 'block';
-    setTimeout(() => errorMsg.style.display = 'none', 3000);
-  }
-}
-</script>
-</section>
 
 
   <!-- PRODUCTOS -->
 <section id="productos" class="py-16 bg-gray-50">
   <div class="max-w-6xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold mb-12" data-translate="productos.title">EARLY ACCESS ESSENTIAL HOODIES</h2>
+    <h2 class="text-3xl font-bold mb-12" data-translate="productos.title">PRODUCTOS</h2>
 <!DOCTYPE html>
-<!-- Descripción de las sudaderas -->
-<div class="descripcion-sudaderas" style="max-width: 900px; margin: 0 auto 40px; padding: 0 20px;">
-    <p style="font-family: 'Montserrat', sans-serif; font-size: 15px; line-height: 1.6; color: #666; font-weight: 400; text-align: center; margin: 0;">
-        <span data-translate="hoodies-desc-line1">Corte oversize, 440 g/m², tacto premium suave y el abrigo que necesitas en los días fríos.</span><br>
-        <span data-translate="hoodies-desc-line2">Material exterior: 100% algodón. Material interior: 70% algodón hilado, 30% poliéster reciclado.</span>
-    </p>
+
 </div>
    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">  
       <!-- PRODUCTO 1 -->
+
       <div class="text-center product-card" data-id="p1">
+    <a href="beigehoodie.html" class="block">
          <div class="carousel relative mx-auto rounded-xl overflow-hidden shadow w-full max-w-md">
   <div class="carousel-images flex transition-transform duration-300">
     <img src="images/SUDADERABEIGEDELANTE.png" class="w-full object-cover">
     <img src="images/SUDADERABEIGEESPALDA.png" class="w-full object-cover">
     <img src="images/2 copia.png" class="w-full object-cover">
   </div>
+   </a>
+
      <!-- Botón izquierda -->
   <button class="carousel-prev absolute top-1/2 left-2 -translate-y-1/2 text-white bg-black bg-opacity-40 px-3 py-1 rounded-full text-xl">
     ‹
@@ -300,7 +241,7 @@ function checkPassword() {
     ›
   </button>
 </div>
-
+ 
         <div id='product-component-1763139880339'></div>
 <script type="text/javascript">
 /*<![CDATA[*/
@@ -513,16 +454,19 @@ function checkPassword() {
 }
 
 </script>
+
       </div>
 
       <!-- PRODUCTO 2 -->
       <div class="text-center product-card" data-id="p2">
+          <a href="azulhoodie.html" class="block">
         <div class="carousel relative mx-auto rounded-xl overflow-hidden shadow w-full max-w-md">
   <div class="carousel-images flex transition-transform duration-300">
     <img src="images/SUDADERAAZULDELANTE.png" class="w-full object-cover">
     <img src="images/SUDADERAAZULESPALDA.png" class="w-full object-cover">
     <img src="images/1 copia.png" class="w-full object-cover">
   </div>
+ </a>
 
   <!-- Botón izquierda -->
   <button class="carousel-prev absolute top-1/2 left-2 -translate-y-1/2 text-white bg-black bg-opacity-40 px-3 py-1 rounded-full text-xl">
@@ -534,7 +478,6 @@ function checkPassword() {
     ›
   </button>
 </div>
-
         
        <div id='product-component-1763484763916'></div>
 <script type="text/javascript">
@@ -751,12 +694,14 @@ function checkPassword() {
 
       <!-- PRODUCTO 3 -->
       <div class="text-center product-card" data-id="p3">
+         <a href="verdehoodie.html" class="block">
           <div class="carousel relative mx-auto rounded-xl overflow-hidden shadow w-full max-w-md">
   <div class="carousel-images flex transition-transform duration-300">
     <img src="images/SUDADERAVERDEDELANTE.png" class="w-full object-cover">
     <img src="images/SUDADERAVERDEESPALDA.png" class="w-full object-cover">
     <img src="images/4 copia.png" class="w-full object-cover">
   </div>
+ </a>
 
   <!-- Botón izquierda -->
   <button class="carousel-prev absolute top-1/2 left-2 -translate-y-1/2 text-white bg-black bg-opacity-40 px-3 py-1 rounded-full text-xl">
@@ -984,12 +929,14 @@ function checkPassword() {
 
       <!-- PRODUCTO 4 -->
       <div class="text-center product-card" data-id="p4">
+          <a href="grishoodie.html" class="block">
            <div class="carousel relative mx-auto rounded-xl overflow-hidden shadow w-full max-w-md">
   <div class="carousel-images flex transition-transform duration-300">
     <img src="images/SUDADERAGRISDELANTE.png" class="w-full object-cover">
     <img src="images/SUDADERAGRISESPALDA.png" class="w-full object-cover">
     <img src="images/3 copia.png" class="w-full object-cover">
   </div>
+</a>
 
   <!-- Botón izquierda -->
   <button class="carousel-prev absolute top-1/2 left-2 -translate-y-1/2 text-white bg-black bg-opacity-40 px-3 py-1 rounded-full text-xl">
@@ -1001,7 +948,6 @@ function checkPassword() {
     ›
   </button>
 </div>
-
         <div id='product-component-1763485794244'></div>
 <script type="text/javascript">
 /*<![CDATA[*/
@@ -1220,128 +1166,7 @@ function checkPassword() {
     </div>
   </div>
 
-<!-- Formulario Reserva Early Access -->
-<div id="ea-form" style="max-width:400px; margin:50px auto; display:flex; flex-direction:column; align-items:center;">
-  <h3 data-translate="form.title">RESERVA TU SUDADERA EARLY ACCES</h3>
-  <p data-translate="form.price" class="text-center">Precio exclusivo: 47'95€ (descuento lanzamiento)</p>
-  <form id="earlyAccessForm">
-    <label data-translate="form.email">Correo:</label><br>
-    <input type="email" id="ea-email" required><br><br>
 
-    <label data-translate="form.age">Edad:</label><br>
-    <input type="number" id="ea-age" required min="12"><br><br>
-
-    <label data-translate="form.address">Dirección:</label><br>
-    <input type="text" id="ea-address" required><br><br>
-
-    <label data-translate="form.color">Color:</label><br>
-    <select id="ea-color" required>
-   <option value="" data-translate="form.select">Selecciona</option>
-   <option value="Blue">Blue</option>
-   <option value="Green">Green</option>
-   <option value="Beige">Beige</option>
-   <option value="Grey">Dark Grey</option>
- </select><br><br>
-
-
-    <label data-translate="form.size">Talla:</label><br>
-    <select id="ea-size" required>
-      <option value="" data-translate="form.select">Selecciona</option>
-      <option value="M">M</option>
-      <option value="L">L</option>
-      <option value="XL">XL</option>
-      <option value="XXL">XXL</option>
-    </select><br><br>
-
-    <button type="submit" data-translate="form.button">Reservar</button>
-  </form>
-  <div id="ea-confirmation" style="margin-top:20px;color:green;font-weight:bold;display:none;"></div>
-</div>
-
-<script>
-  // STOCK MÁXIMO POR TALLA/COLOR
-  const maxStock = {
-    "Blue": { "M":10, "L":8, "XL":5, "XXL":3 },
-    "Green": { "M":10, "L":8, "XL":5, "XXL":3 },
-    "Beige": { "M":10, "L":8, "XL":5, "XXL":3 },
-    "Grey": { "M":10, "L":8, "XL":5, "XXL":3 }
-  };
-
-  // Función para deshabilitar opciones agotadas visualmente
-  function updateStockOptions() {
-    const colorSelect = document.getElementById('ea-color');
-    const sizeSelect = document.getElementById('ea-size');
-
-    for(let i=1; i<colorSelect.options.length; i++){
-      const color = colorSelect.options[i].value;
-      colorSelect.options[i].disabled = Object.values(maxStock[color]).every(s => s <=0);
-    }
-
-    for(let i=1; i<sizeSelect.options.length; i++){
-      const size = sizeSelect.options[i].value;
-      let color = colorSelect.value;
-      if(color){
-        sizeSelect.options[i].disabled = maxStock[color][size] <= 0;
-      } else {
-        sizeSelect.options[i].disabled = false;
-      }
-    }
-  }
-
-  document.getElementById('ea-color').addEventListener('change', updateStockOptions);
-  document.getElementById('ea-size').addEventListener('change', updateStockOptions);
-
-  // ENVÍO DE FORMULARIO
-  document.getElementById('earlyAccessForm').addEventListener('submit', function(e){
-    e.preventDefault();
-
-    const email = document.getElementById('ea-email').value;
-    const age = document.getElementById('ea-age').value;
-    const address = document.getElementById('ea-address').value;
-    const color = document.getElementById('ea-color').value;
-    const size = document.getElementById('ea-size').value;
-
-    // Obtener idioma actual
-    const currentLang = localStorage.getItem('lamphost-language') || 'es';
-    const dict = translations[currentLang];
-
-    if(!email || !age || !address || !color || !size){
-      alert(dict['form.complete'] || "Completa todos los campos");
-      return;
-    }
-
-    if(maxStock[color][size] <= 0){
-      alert(dict['form.error'] || "Lo sentimos, esta combinación está agotada");
-      return;
-    }
-
-    maxStock[color][size]--; // resta 1 al stock local
-    updateStockOptions();    // actualizar visualmente
-
-    // Envío de datos a Google Forms
-    const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSf5EO9A1mLpUgBxSkzY6WCRTnXjqO5p0Q3sT-vWuYqKVlQE-w/formResponse";
-    const data = new FormData();
-    data.append("entry.916491310", email);
-    data.append("entry.1484150538", age);
-    data.append("entry.1293148442", address);
-    data.append("entry.901681363", color);
-    data.append("entry.489968571", size);
-
-    fetch(formUrl, { method: "POST", body: data, mode: "no-cors" })
-      .then(() => {
-        const confirmationDiv = document.getElementById('ea-confirmation');
-        confirmationDiv.style.display = 'block';
-        confirmationDiv.textContent = dict['form.confirmation'] || "¡Reserva confirmada!";
-        document.getElementById('earlyAccessForm').reset();
-      })
-      .catch(() => {
-        alert("Error al enviar la reserva. Intenta nuevamente.");
-      });
-  });
-
-  // Inicializa opciones según stock
-  updateStockOptions();
-</script>
 </section>
 
 
@@ -1413,32 +1238,11 @@ const translations = {
     // Hero
     "hero.title": "RIDE THE LIGHT",
     
-    // Overlay Early Access
-    "overlay.title": "🔒 EARLY ACCESS",
-    "overlay.subtitle": "Introduce la contraseña para ver los productos exclusivos",
-    "overlay.placeholder": "Contraseña",
-    "overlay.button": "Entrar",
-    "overlay.error": "Contraseña incorrecta",
-    
+  
     // Productos
-    "productos.title": "EARLY ACCESS ESSENTIAL HOODIES",
-    "hoodies-desc-line1": "Corte oversize, 440 g/m², tacto premium suave y el abrigo que necesitas en los días fríos.",
-    "hoodies-desc-line2": "Material exterior: 100% algodón. Material interior: 70% algodón hilado, 30% poliéster reciclado.",
-
-    // Formulario
-    "form.title": "RESERVA TU SUDADERA EARLY ACCESS",
-    "form.price": "Precio exclusivo: 47,95€ (descuento lanzamiento)",
-    "form.email": "Correo:",
-    "form.age": "Edad:",
-    "form.address": "Dirección:",
-    "form.color": "Color:",
-    "form.size": "Talla:",
-    "form.select": "Selecciona",
-    "form.button": "Reservar",
-    "form.confirmation": "¡Reserva confirmada! Recibirás un correo con tu descuento al lanzar la web.",
-    "form.error": "Lo sentimos, esta combinación está agotada",
-    "form.complete": "Completa todos los campos",
+    "productos.title": "PRODUCTOS",
     
+   
     // About
     "about.title": "ABOUT LAMPHOST",
     "about.text": "Lamphost nació hace 10 años como un proyecto de skate. Una pasión clara, un trabajo de fin de grado y un grupo de amigos dispuestos a soñar, fueron los ingredientes necesarios para la creación de esta marca. Después de años de altibajos, Charly, el principal fundador de la misma, empezó a descubrir la alta montaña y a interesarse por las posibilidades que ofrece. Después de varias temporadas aprendiendo y disfrutando de la nieve de Sierra Nevada (Granada, España), una nueva idea, un nuevo enfoque y un nuevo equipo vuelven a iluminar la farola de Lamphost. Sin mucho más que ilusión y ganas, ahora Lamphost se encuentra en una ciudad rodeada de las montañas de los Alpes austriacos, Innsbruck. Este cambio se hace para poder conseguir un aumento de calidad en todos los aspectos, tanto en los productos, como en nuestro contenido.",
@@ -1462,32 +1266,11 @@ const translations = {
     // Hero
     "hero.title": "RIDE THE LIGHT",
     
-    // Overlay Early Access
-    "overlay.title": "🔒 EARLY ACCESS",
-    "overlay.subtitle": "Enter password to view exclusive products",
-    "overlay.placeholder": "Password",
-    "overlay.button": "Enter",
-    "overlay.error": "Incorrect password",
-    
+  
     // Productos
-    "productos.title": "EARLY ACCESS ESSENTIAL HOODIES",
-    "hoodies-desc-line1": "Oversized fit, 440gsm weight, a soft premium feel, and the warmth you need on cold days.",
-    "hoodies-desc-line2": "Outer fabric: 100% cotton. Inner fabric: 70% ring-spun cotton, 30% recycled polyester.", 
-
-    // Formulario
-    "form.title": "RESERVE YOUR EARLY ACCESS HOODIE",
-    "form.price": "Exclusive price: €47'95 (launch discount)",
-    "form.email": "Email:",
-    "form.age": "Age:",
-    "form.address": "Address:",
-    "form.color": "Color:",
-    "form.size": "Size:",
-    "form.select": "Select",
-    "form.button": "Reserve",
-    "form.confirmation": "Reservation confirmed! You'll receive an email with your discount when we launch.",
-    "form.error": "Sorry, this combination is sold out",
-    "form.complete": "Complete all fields",
-    
+    "productos.title": "PRODUCTS",
+   
+   
     // About
     "about.title": "ABOUT LAMPHOST",
     "about.text": "At Lamphost we believe in light as a form of expression. Our pieces combine minimalist design with quality materials to transform any space.",
