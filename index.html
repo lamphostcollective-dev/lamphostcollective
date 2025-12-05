@@ -145,7 +145,13 @@ button[type="submit"]:hover {
   font-style: normal !important;
   font-weight: 700;
 }
-
+/* Ajustar imágenes 3 y 5 del banner solo en móvil */
+@media (max-width: 767px) {
+  .carousel-slide:nth-child(3),
+  .carousel-slide:nth-child(5) {
+    object-position: 80% center;
+  }
+}
 </style>
 
 </head>
